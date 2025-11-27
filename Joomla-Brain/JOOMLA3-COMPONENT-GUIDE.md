@@ -537,7 +537,47 @@ JSession::checkToken() or jexit(JText::_('JINVALID_TOKEN'));
 
 ## Common Issues
 
-### 1. Component Not Appearing in Menu
+### 1. View's `$this->get('Xxx')` Not Working
+
+**Cause**: In Joomla 3, `$this->get('Xxx')` in a view calls `getXxx()` on the model. The method name MUST start with `get`.
+
+**Wrong**:
+```php
+// In model - this won't work with $this->get('ChronoformsInstalled')
+public function isChronoformsInstalled() { ... }
+```
+
+**Correct**:
+```php
+// In model - use getXxx pattern
+public function getChronoformsInstalled() { ... }
+
+// In view
+$this->chronoformsInstalled = $this->get('ChronoformsInstalled'); // calls getChronoformsInstalled()
+```
+
+### 2. Database Table Detection Issues
+
+**Cause**: Using regex or hardcoded prefixes instead of configured database prefix
+
+**Wrong**:
+```php
+// This matches tables with ANY prefix, not just your site's
+foreach ($tables as $table) {
+    if (preg_match('/mytable$/i', $table)) { ... }
+}
+```
+
+**Correct**:
+```php
+// Use the configured prefix from Joomla
+$db = $this->getDbo();
+$prefix = $db->getPrefix();  // Gets prefix from configuration.php
+$tableName = $prefix . 'mytable';
+if (in_array($tableName, $tables)) { ... }
+```
+
+### 3. Component Not Appearing in Menu
 
 **Cause**: Missing `<menu>` tag or wrong menu icon class
 
