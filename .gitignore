@@ -1,0 +1,43 @@
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build artifacts
+*.zip
+dist/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Logs
+*.log
+
+# Test/sample form exports
+*.cf6bak
+*.cnvf
+*_convertforms.json
+
+# Legacy/test files not part of this project
+cf6_to_convertforms.php
+cf6_to_convertforms.py
+convert_all.php
+convert_all.py
+web_converter.php
+novaraininstaller.php
+novaraininstaller.xml
+script.install.php
+documentation.html
+index.html
+nul
+packages/
+language/

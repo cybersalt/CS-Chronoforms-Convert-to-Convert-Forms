@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.1" method="upgrade">
+    <name>com_cf6convert</name>
+    <author>Tim Davis - Cybersalt Consulting Ltd.</author>
+    <creationDate>November 2025</creationDate>
+    <copyright>(C) 2025 Cybersalt Consulting Ltd.</copyright>
+    <license>GNU General Public License v3.0</license>
+    <authorEmail>tim@cybersalt.com</authorEmail>
+    <authorUrl>https://cybersalt.com</authorUrl>
+    <version>1.0.0</version>
+    <description>Convert Chronoforms 6 forms to Convert Forms format. Automatically converts fields, email tasks, and placeholders.</description>
+    <scriptfile>script.php</scriptfile>
+
+    <administration>
+        <menu img="class:cogs">CF6 to ConvertForms</menu>
+        <files folder="admin">
+            <filename>cf6convert.php</filename>
+            <filename>controller.php</filename>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>views</folder>
+            <folder>language</folder>
+        </files>
+    </administration>
+</extension>

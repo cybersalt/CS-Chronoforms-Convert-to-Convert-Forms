@@ -1,0 +1,2 @@
+-- Uninstallation SQL for CF6 to Convert Forms converter
+-- No tables to remove

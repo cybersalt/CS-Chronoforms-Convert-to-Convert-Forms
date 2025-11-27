@@ -1,0 +1,2 @@
+-- Installation SQL for CF6 to Convert Forms converter
+-- No tables required - we read from Chronoforms and write to Convert Forms
