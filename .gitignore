@@ -26,18 +26,3 @@ dist/
 *.cf6bak
 *.cnvf
 *_convertforms.json
-
-# Legacy/test files not part of this project
-cf6_to_convertforms.php
-cf6_to_convertforms.py
-convert_all.php
-convert_all.py
-web_converter.php
-novaraininstaller.php
-novaraininstaller.xml
-script.install.php
-documentation.html
-index.html
-nul
-packages/
-language/
